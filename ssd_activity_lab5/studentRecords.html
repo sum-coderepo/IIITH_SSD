@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="student.css">
+    <script type="text/javascript">
+        function myCreateFunction() {
+            var table = document.getElementById("Student");
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var ROll = document.getElementById("Rnum").value;
+            var Name = document.getElementById("sname").value;
+            cell1.innerHTML = Name;
+            cell2.innerHTML = ROll;
+        }
+
+        function myDeleteFunction() {
+            document.getElementById("Student").deleteRow(-1);
+        }
+    </script>
+
+</head>
+<body>
+
+<h1>Welcome to the Student Page </h1>
+
+
+<div>
+    <form onclick="myCreateFunction()" , name = "form1">
+        <label for="Rnum">Roll Number</label>
+        <input type="text" id="Rnum" name="Roll Number" placeholder="Enter Roll Number">
+
+        <label for="sname">Student Name</label>
+        <input type="text" id="sname" name="Student Name" placeholder="Enter Student Name">
+
+        <input type="button" value="Add Row">
+    </form>
+
+    <input type="button" onclick="myDeleteFunction()" value="Delete Row">
+</div>
+</br></br></br></br></br>
+
+
+<table id="Student">
+    <tr>
+        <th>Name</th>
+        <th>Roll Number</th>
+    </tr>
+
+</table>
+
+
+
+
+
+
+</body>
+</html>
