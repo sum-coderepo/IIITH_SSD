@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="myJs.js"></script>
+</head>
+<body>
+
+<h1>Team Form </h1>
+
+
+<div>
+    <form>
+        <div class="container">
+            <h1>Register</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <label for="Manager's Name"><b>Manager's Name</b></label>
+            <input type="text" placeholder="Enter Manager Name" name="tMName" id="tMName" required>
+
+            <label for="email"><b>Group Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+            <label for="Server"><b>Server UserName</b></label>
+            <input type="text" placeholder="Enter Server UserName" name="SUN" id="SUN" required>
+
+            <label for="Serverpwd"><b>Server Password</b></label>
+            <input type="text" placeholder="Enter Password" name="SPW" id="SPW" required>
+
+            <label for="Confirmpwd"><b>confirm password</b></label>
+            <input type="text" placeholder="Confirm Password" name="CPW" id="CPW" required>
+
+            <label for="TeamL"><b>Select Team Lead</b></label>
+            <select name="TeamLeadDD" id="TeamLeadDD">
+                <option value="Jack">Jack</option>
+                <option value="Rob">Rob</option>
+                <option value="Martin">Martin</option>
+                <option value="Mark">Mark</option>
+                <option value="Steve">Steve</option>
+            </select>
+
+        </div>
+
+
+
+                    <div class="flex-container">
+
+                    <div class="float-child" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <p draggable="true" ondragstart="drag(event)" id="drag1" width="20" height="20">
+
+                                Hello
+                                <br>
+                        Flex Column 1
+                    </p>
+                    </div>
+
+                    <div class="float-child" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+                        Flex Column 2
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+
+
+            <hr>
+
+
+    </form>
+
+</div>
+
+
+</body>
+</html>
