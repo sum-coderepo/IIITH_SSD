@@ -1,0 +1,141 @@
+
+.Container{
+	 border: 2px solid #BFBFBF;
+	margin-top: 0%;
+	margin-left: 5%;
+	height: 500px;
+	width: 95%;
+	color: black;
+	background-color: #32BD36;
+    box-sizing: border-box;
+}
+.Parent { 
+    width: 50%; 
+} 
+.child-conaitner { 
+    float: left; 
+    width: 50%; 
+} 
+.child { 
+    float: left; 
+    width: 25%; 
+} 
+.vulture-Box { 
+	border: 3px solid #0E2B45;
+    background-color: #ECF9F9; 
+    margin-top: 30%;
+    margin-left: 10%; 
+    height: 200px; 
+
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+} 
+.crows-Box { 
+  border: 3px solid #0E2B45;
+    margin-top: 30%;
+    margin-left: 10%; 
+    height: 200px; 
+    background-color: #B6D8CF; 
+
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+label{
+	margin-left: 40%;
+	font-size: 35px;
+	color:black;
+	background-image:
+	linear-gradient(to right, #B40990, #160212);
+	 color: transparent;
+     background-clip: text;
+  -webkit-background-clip: text;
+}
+h1{
+	font-family: Copperplate Gothic Light;
+	 background-image: radial-gradient(ellipse, #553c9a, #ee4b2b);
+	 color: transparent;
+     background-clip: text;
+  -webkit-background-clip: text;
+}
+.vultures{
+	z-index: 1005;
+ margin-left: 3%;
+ margin-top: 3%;
+ background-color: #F0D108;
+ border-radius: 50%;
+ height: 40px;
+ width: 40px;
+  border: 1px solid #9B9B12;
+}
+.vultures:hover{
+  border: 2px solid #AAAA04;
+  box-shadow: 0 8px 11px 0 rgba(0,0,0,0.24), 0 13px 25px 0 rgba(0,0,0,0.19);
+}
+.crows{
+	z-index: 1005;
+	float: left;
+ margin-left: 3%;
+ margin-top: 3%;
+ background-color: #95180E;
+ border-radius: 50%;
+ height: 40px;
+ width: 40px;
+  border: 1px solid #3E0B07;
+}
+
+.crows:hover{
+	margin-top: 1%;
+	margin-left: 2%;
+  border: 2px solid #6D1E18;
+  box-shadow: 0 8px 11px 0 rgba(0,0,0,0.24), 0 13px 25px 0 rgba(0,0,0,0.19);
+}
+polyline {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke: rgba(0,0,0,0.5);
+}
+svg {
+    width:100%;
+    min-height:1000px;
+}
+
+.place{
+	z-index: 1002;
+	position: absolute;
+    border-radius: 50%;
+	float: left;
+    width:40px;
+    height:40px;
+    background:white;
+
+  border: 0px solid #DAF0F0;
+}
+
+#crows-turn{
+	float: right;
+	margin-top: 10%;
+	margin-left: 40%;
+	margin-right: 10%;
+	font-size: 25px;
+	color:transparent;
+	animation: effect 1s linear infinite;
+}
+#vulture-turn{
+	float: left;
+	margin-top: 10%;
+	margin-left: 10%;
+	font-size: 25px;
+	color:transparent;
+	animation: effect 1s linear infinite;
+}
+@keyframes effect {
+        0% {
+            background: linear-gradient(to right,#C7BBD7, #690A71);
+            -webkit-background-clip: text;
+        }
+ 
+        100% {
+            background: linear-gradient(to right,black,black);
+            -webkit-background-clip: text;
+        }
+    }
+

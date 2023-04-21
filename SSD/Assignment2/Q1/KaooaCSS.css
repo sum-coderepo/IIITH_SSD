@@ -1,0 +1,43 @@
+.ParentBox {
+    height:600px;
+    width:600px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    color: chocolate;
+    border-width: 15px 15px 15px 15px;
+    border-color: grey;
+    border-style: solid;
+    margin-top: 200px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 750px;
+    background: repeating-linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2) 10px,
+            rgba(0, 0, 0, 0.3) 10px,
+            rgba(0, 0, 0, 0.3) 20px
+    ),
+    url(http://s3-us-west-2.amazonaws.com/s.cdpn.io/3/old_map_@2X.png);
+
+}
+
+.box {
+    background-color: Red;
+    margin: 20px;
+    padding: 20px;
+
+    text-align:center;
+    border: black;
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+}
+.svgContainer{
+    color: black;
+    strokeWidth: 12;
+
+}
+

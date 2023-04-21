@@ -1,0 +1,38 @@
+#!/bin/bash
+
+function CalcLucas(){
+  n=$1
+  if [ $n -le 0 ]
+   then
+     echo 2
+     return 2
+  fi
+  if [ $n -le 1 ]
+    then
+    echo 1
+  else
+    a=$(CalcLucas $[$n-1])
+    b=$(CalcLucas $[$n-2])
+  echo $(($a+$b))
+  fi
+}
+
+ #function CalcLucas(){
+ #  n=$1
+ #  if [ $n -eq 0 ]
+ #   then
+ #     #echo 2
+ #     return 2
+ #  fi
+ #  if [ $n -eq 1 ]
+ #    then
+ #    return 1
+ #  else
+ #    a=$(CalcLucas $[$n-1])
+ #    b=$(CalcLucas $[$n-2])
+ #  echo $(($a+$b))
+ #  fi
+ #}
+
+
+CalcLucas 27

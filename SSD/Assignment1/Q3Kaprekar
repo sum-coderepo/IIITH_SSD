@@ -1,0 +1,65 @@
+#!/bin/bash
+#declare -gA sorted=()
+
+
+sortabs(){
+
+  arr=()
+  value=""
+  foo=$1
+  func=$2
+  for (( i=0; i<${#foo}; i++ )); do
+  x="${foo:$i:1}"
+  arr[i]=$x
+done
+  readarray -t sorted < <(for a in "${arr[@]}"; do echo "$a"; done | sort)
+
+  if [ $func == 'a' ];
+  then
+    value=${sorted[0]}${sorted[1]}${sorted[2]}${sorted[3]}
+  else
+    value=${sorted[3]}${sorted[2]}${sorted[1]}${sorted[0]}
+    fi
+
+    value=$(expr $value + 0)
+    echo $value
+}
+  
+kaprekarRec(){
+  diff=$1
+  prev=$2
+
+  echo $diff $prev
+
+   if [ $diff -eq $prev ]
+        then
+        return 1
+        fi
+  prev=$diff;
+
+  prev=`printf "%04i" $prev`
+  diff=`printf "%04i" $diff`
+
+  prev_a=$(sortabs $prev 'a')
+  diff_r=$(sortabs $diff 'r')
+
+  #echo "Newval" $prev_a "Newval1" $diff_r
+  diff=$((diff_r-prev_a))
+  echo $diff
+  kaprekarRec $diff $prev
+}
+
+
+Calckaprekar(){
+
+  n=$1
+  rev=0
+ kaprekarRec $n $rev
+  echo $var
+}
+
+rev=0;
+Calckaprekar 7123
+#sortabs 3752 "a"
+#newval=$(sortabs 3752 'a')
+#echo $newval

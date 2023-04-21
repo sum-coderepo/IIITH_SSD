@@ -1,0 +1,58 @@
+#!/bin/bash
+zero=0;
+function TwinPrime(){
+  a=$1
+
+  echo "Parameter " $a
+  array=($(seq 1 $((a+2))))
+  p=2
+  #a=50
+
+  while [ $((p*p))  -lt $((a+1)) ]; do
+    if [ ${array[$p]} -gt 1 ]
+    then
+      array1=($(seq $((p*2)) $p $((a+2)) ))
+        for i in "${array1[@]}"
+        do
+          array[$i]=0
+        done
+  fi
+  ((p=p+1))
+  done
+
+  final_sum=0
+
+  for i in $(seq 2 $((a-1)));do
+    #echo "i :" $i "array i: " array[$i] "array i+2 : " array[$((i + 2))]
+    if [  ${array[$i]}  -gt 0 ] && [  ${array[$((i + 2))]}  -gt 0 ];
+    then
+    echo $i $((i+2)) $((i * ((i+2))))
+    num=$((i * ((i+2))))
+
+   while [ $num -gt 0 ]
+    do
+      mod=`expr $num % 10`
+      #echo "mod " $mod " sum" $sum " num" $num
+      sum=`expr $sum + $mod`
+      #echo "sum" $sum
+      num=`expr $num / 10`
+      #echo " num" $num
+
+      if [ $num -eq $zero ] && [ $sum -gt 9 ];
+      then
+        num=$sum
+        sum=0
+        fi
+
+   done
+    echo $sum
+    final_sum=$((final_sum+sum))
+    sum=0
+    fi
+    done
+    echo "Final Sum: " $final_sum
+
+
+}
+TwinPrime 5433
+

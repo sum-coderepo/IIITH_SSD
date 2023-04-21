@@ -1,0 +1,56 @@
+.navbar{
+    background-color: blue;
+    border-radius: 30px;
+    overflow: auto;
+
+}
+.navbar li{
+    float:left;
+    list-style: none;
+    margin: 13px 20px;
+}
+.navbar ul{
+    overflow: auto;
+}
+.navbar li a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar li a:hover{
+color: crimson;
+}
+
+.cl_NewsBrand{
+    text-decoration: blue;
+    color: blue;
+    overflow: auto;
+    vertical-align: middle;
+    margin: 13px 20px;
+    font-size: 30px;
+    padding: 10px 300px;
+}
+
+.cl_Search{
+    float: right;
+    color: white;
+    padding: 12px 50px;
+    border-radius: 10px;
+}
+
+.form-control{
+    border-radius: 10px;
+    width: 180px;
+    height: 20px;
+
+}
+.cl_btn_search{
+    font-size: 15px;
+    position: absolute;
+    right: 130px;
+    top: 15px;
+
+
+
+}

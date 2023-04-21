@@ -1,0 +1,15 @@
+#!/bin/bash
+p=5
+n=20
+array1=($(seq 1 30))
+array=($(seq $p 2 $n ))
+  for i in "${array[@]}"
+  do
+    echo $i
+    array1[i]=0
+    done
+
+  echo ${array1[@]}
+
+
+for i in $(seq 1 $((n-1))); do echo $i; done

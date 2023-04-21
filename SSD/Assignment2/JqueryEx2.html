@@ -1,0 +1,89 @@
+<!--doctype html-->
+<html lang="en">
+<head>
+
+    <title>Lines</title>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://graphicalstructure.org/Playground/Scripts/Line.js"></script>
+
+    <style>
+
+        body
+        {
+            padding:0px;
+            margin:0px;
+            height: 40in;
+        }
+
+        .round {
+
+            height: 80px;
+            width : 80px;
+
+            border-radius: 100%;
+            background-color:rgba(0, 0, 0, 0.842);
+            font-family: Segoe UI;
+            position:absolute;
+            color: coral;
+            transition: 100ms;
+            vertical-align: middle;
+            text-align: center;
+            cursor: default;
+
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+<div id="c1" class="round">DRAG</div>
+
+<div id="c3" class="round" style="left:700px;">DRAG</div>
+
+
+<script>
+
+    $(".round").draggable();
+
+    var LineController = connect();
+
+
+    LineController.drawLine({
+
+        left_node:"c3",
+        right_node:'c1',
+        col : "red",
+        width:2,
+        gtype:"D"
+
+
+    })
+
+
+    $( '#'+'c1' ).draggable({
+        drag: function(event, ui){LineController.redrawLines();}
+    });
+
+
+
+    $( '#'+'c3' ).draggable({
+        drag: function(event, ui){LineController.redrawLines();}
+    });
+
+
+
+
+</script>
+
+</body>
+
+
+
+</html>

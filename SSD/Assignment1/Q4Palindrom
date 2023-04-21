@@ -1,0 +1,59 @@
+#!/bin/bash
+
+
+CheckValidDateFunc(){
+  Day=$1
+  Month=$2
+  year=$3
+  result="TRUE"
+  echo $Day $Month $year
+  if [ $Month -lt 1 ] || [ $Month -gt 12 ]
+  then
+  result="FALSE"
+  fi
+
+  if [ $Day -lt 1 ] || [ $Day -gt 31 ]
+  then
+  result="FALSE"
+  fi
+
+  if [ $Month == 4 ] | [ $Month == 6 ] | [ $Month == 9 ] | [ $Month == 11 ]
+  then
+   if [ $Day -gt > 30 ]
+      then
+    result="FALSE"
+    fi
+  fi
+
+  if [ $Month == 02 ]; then
+    if [ $Day -gt 29 ] ; then
+      result="FALSE"
+    elif [ $Day -eq 29 ] && [ `expr $year % 4` -ne 0 ]; then
+      echo $((year % 4 != 0))
+      result="FALSE"
+      fi
+  fi
+
+  echo $result
+
+}
+function CalcPalindrome(){
+
+  n=$1
+  rev=`echo $n | rev`
+  echo $n $rev
+
+
+  day="${rev:0:2}" ;
+  echo "${day}"
+
+
+  month="${rev:2:2}" ;
+  echo "${month}"
+
+
+  VAR=$(CheckValidDateFunc $day $month $n)
+  echo $VAR
+}
+
+CalcPalindrome 2092

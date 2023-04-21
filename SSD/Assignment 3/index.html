@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kaoaa</title>
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+    body {
+        background-color: white;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+<body>
+
+
+    <p id="text1">  <h1> Welcome to Kaooa Game </h1> </p>
+    <p> <h1> Score Below:- </h1> </p>
+    <label id = "GFG"> 0 </label>
+    <input type="button" id="btn" value="Download Logs" />
+
+
+
+<div class="svg-container">
+    <svg height='100%' width='100%' xmlns="http://www.w3.org/2000/svg">
+        <line id= "Line1" stroke='black' stroke-width='4'  x1='840' x2='1120' y1='450' y2='920'>  </line> <!-- 0 to 8 -->
+        <line id ="Line2" stroke='black' stroke-width='4'  x1='1160' x2='840' y1='500' y2='980'> </line> <!-- 2 to 9 -->
+        <line id ="Line3" stroke='black' stroke-width='4'  x1='1150' x2='710' y1='505' y2='725'></line> <!-- 2 to 5 -->
+        <line id= "Line4" stroke='black' stroke-width='4'  x1='850' x2='820' y1='450' y2='1000'></line> <!-- 0 to 9 -->
+        <line id ="Line5" stroke='black' stroke-width='4'  x1='715' x2='1120' y1='730' y2='925'></line><!-- 5 to 8 -->
+    </svg>
+</div>
+
+
+<div class="crow" >
+    <div class="crow_box" id="20"
+         ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" >
+    </div>
+
+    <div class="crow_box" id="21"
+         ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" >
+    </div>
+
+    <div class="crow_box" id="22"
+         ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" >
+    </div>
+
+    <div class="crow_box" id="23"
+         ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" >
+    </div>
+
+    <div class="crow_box" id="24"
+         ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" >
+    </div>
+
+    <div class="crow_box" id="25"
+         ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" >
+    </div>
+
+    <div class="crow_box" id="26"
+         ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" >
+    </div>
+
+    <div class="vulture_box" id="30"
+         ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" >
+    </div>
+
+</div>
+
+
+<div class="ParentBox">
+
+
+
+
+
+
+    <h1 style="white:black;position:relative;font-family:helvetical;font-size:20px;left:20px;bottom:325px;"></h1>
+
+    <div class="box" id="0" style="margin-top: 0; margin-left: 28%;" draggable="true" ondragstart="dragStart(event)" ondrop="Drop(event)" ondragover="Allow_Drop(event)" Box 1 > </div>
+    <div class="box" id="1" style="margin-top:2px; margin-left: 78%;" draggable="true" ondragstart="dragStart(event)" ondrop="Drop(event)" ondragover="Allow_Drop(event)" Box  2> </div>
+    <div class="box" id="2" style="margin-top:50px; margin-left: 45%;" draggable="true" ondragstart="dragStart(event)" ondrop="Drop(event)" ondragover="Allow_Drop(event)" Box 1 > </div>
+
+    <div class="box" id="3" style="margin-top:-15px; margin-left: 28%;"  draggable="true" ondragstart="dragStart(event)" ondrop="Drop(event)" ondragover="Allow_Drop(event)" Box  2> </div>
+    <div class="box" id="4" style="margin-top:1px; margin-left: 55%;"    draggable="true" ondragstart="dragStart(event)" ondrop="Drop(event)" ondragover="Allow_Drop(event)" Box 1 > </div>
+
+    <div class="box" id="5" style="margin-top:-40px; margin-left: 8%;" draggable="true" ondragstart="dragStart(event)" ondrop="Drop(event)" ondragover="Allow_Drop(event)" Box  2> </div>
+    <div class="box" id="6" style="margin-top:10px; margin-left: 25%;" draggable="true" ondragstart="dragStart(event)" ondrop="Drop(event)" ondragover="Allow_Drop(event)" Box 1 > </div>
+    <div class="box" id="7" style="margin-top:-10px; margin-left: 45%;" draggable="true" ondragstart="dragStart(event)" ondrop="Drop(event)" ondragover="Allow_Drop(event)" Box 1 > </div>
+    <div class="box" id="8" style="margin-top:5%; margin-left: 75%;"   draggable="true" ondragstart="dragStart(event)" ondrop="Drop(event)" ondragover="Allow_Drop(event)" Box 1 > </div>
+    <div class="box" id="9" style="margin-top:1%; margin-left: 25%;" draggable="true"  ondragstart="dragStart(event)" ondrop="Drop(event)" ondragover="Allow_Drop(event)" Box  2> </div>
+
+
+
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="myjs.js"></script>
+</body>
+</html>
